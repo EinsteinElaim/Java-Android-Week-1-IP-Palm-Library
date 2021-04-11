@@ -52,4 +52,9 @@ dependencies {
     //noinspection GradleCompatible
     implementation 'com.android.support:design:27.0.2'
     compileOnly 'com.google.android.wearable:wearable:2.8.1'
+
+    //    ButterKnife
+    implementation 'com.jakewharton:butterknife:10.2.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.0'
+
 }
