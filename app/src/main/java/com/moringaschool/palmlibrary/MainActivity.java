@@ -13,6 +13,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.moringaschool.palmlibrary.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
+//    Android's built in View Binding:
     ActivityMainBinding binding;
 
     @Override
