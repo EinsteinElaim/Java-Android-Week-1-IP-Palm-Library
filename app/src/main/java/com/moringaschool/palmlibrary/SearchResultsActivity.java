@@ -16,6 +16,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import butterknife.BindView;
+import butterknife.ButterKnife;
 
 public class SearchResultsActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -36,6 +37,7 @@ public class SearchResultsActivity extends AppCompatActivity implements View.OnC
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search_results);
+        ButterKnife.bind(this);
 
 
         ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, titles);
