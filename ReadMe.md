@@ -1,5 +1,7 @@
 # Palm Library Android App - Week 1/4
 
+### Author : Einstein Eliam
+
 ## Welcome to The Palm Library App - The internet's library on your palm!
 <p>This app is designed to enable learners and curious minds to have a dedicated and simplified 
 go-to app to poke around the internet in search of books on all genres and topics. The source to be
