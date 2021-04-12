@@ -18,7 +18,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 
-public class SearchFragment extends Fragment {
+public class SearchFragment extends Fragment implements View.OnClickListener{
     Intent intent;
     String search;
     View view;
@@ -35,19 +35,19 @@ public class SearchFragment extends Fragment {
 
         search = searchText.getText().toString();
 
-        searchLibrary.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(getActivity(), SearchResultsActivity.class);
-                i.putExtra("searchText", search);
-                Log.d("SearchBtnClicked", search);
-                startActivity(i);
-            }
-        });
+        searchLibrary.setOnClickListener(this);
 
 
         return view;
 //        return inflater.inflate(R.layout.fragment_search, container, false);
+    }
+
+    @Override
+    public void onClick(View v) {
+        Intent i = new Intent(getActivity(), SearchResultsActivity.class);
+        i.putExtra("searchText", search);
+        Log.d("SearchBtnClicked", search);
+        startActivity(i);
     }
 
 }
