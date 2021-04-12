@@ -14,11 +14,16 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 
 public class SearchFragment extends Fragment {
     Intent intent;
     String search;
     View view;
+    @BindView(R.id.editTextSearchLibrary) EditText searchText;
+    @BindView(R.id.buttonSearchLibrary) Button searchLibrary;
 
     @Nullable
     @Override
@@ -26,9 +31,9 @@ public class SearchFragment extends Fragment {
                              Bundle savedInstanceState) {
 
         view = inflater.inflate(R.layout.fragment_search, container, false);
-        EditText searchText = (EditText) view.findViewById(R.id.editTextSearchLibrary);
+        ButterKnife.bind(this.getActivity());
+
         search = searchText.getText().toString();
-        Button searchLibrary = (Button) view.findViewById(R.id.buttonSearchLibrary);
 
         searchLibrary.setOnClickListener(new View.OnClickListener() {
             @Override

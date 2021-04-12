@@ -14,6 +14,7 @@ import android.widget.Toast;
 import android.widget.Toolbar;
 
 import butterknife.BindView;
+import butterknife.ButterKnife;
 
 public class SplashScreen extends AppCompatActivity implements View.OnClickListener {
     @BindView(R.id.toolbar) Toolbar toolbar;
@@ -28,6 +29,10 @@ public class SplashScreen extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
+        ButterKnife.bind(this);
+
+        signIn.setOnClickListener(this);
+        signUp.setOnClickListener(this);
     }
 
 
