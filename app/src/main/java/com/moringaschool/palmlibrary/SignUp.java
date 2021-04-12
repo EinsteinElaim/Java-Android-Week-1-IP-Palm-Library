@@ -14,6 +14,7 @@ import android.widget.Toast;
 import android.widget.Toolbar;
 
 import butterknife.BindView;
+import butterknife.ButterKnife;
 
 public class SignUp extends AppCompatActivity implements View.OnClickListener {
     @BindView(R.id.toolbar) Toolbar toolbar;
@@ -29,6 +30,7 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
+        ButterKnife.bind(this);
     }
 
 
